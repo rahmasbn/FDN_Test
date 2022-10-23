@@ -1,0 +1,46 @@
+.navbar {
+  padding: 1rem 0;
+  /* background-color: violet; */
+}
+.navTop {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 3px;
+}
+.navBottom {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-bottom: 2px solid #e5e5e5;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+.searchInput {
+  background-color: white;
+  border: 1px solid #c4bbbb;
+  border-radius: 3px;
+  height: 40px;
+  width: 100%;
+  padding: 1rem 2.5rem;
+}
+.btnLogin {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+  background-color: #db284e;
+  border: 0;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.loginText {
+  text-transform: uppercase;
+  padding: 0 0.5rem;
+  color: #fff;
+  font-weight: "lighter";
+  font-family: "Poppins";
+}

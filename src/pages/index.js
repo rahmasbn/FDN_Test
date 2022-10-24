@@ -8,6 +8,12 @@ import Samantha from "public/samantha.png";
 import Foundie from "public/foundie.png";
 import Blush from "public/blush.png";
 import Serum from "public/serum.png";
+import BodyShop from "public/body-shop.png";
+import Maybelline from "public/maybelline.png";
+import Innisfree from "public/innisfree.png";
+import Ordinary from "public/the-ordinary.png";
+import Nivea from "public/nivea.png";
+import SKII from "public/SK-II.png";
 
 const Data = [
   {
@@ -88,6 +94,45 @@ const productMatch = [
   },
 ];
 
+const articles = [
+  {
+    title: "Brush dan Alat Makeup Yang Paling Sering Digunakan",
+    author: "celle",
+    image: "https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg",
+    published_at: "4 hours ago",
+  },
+  {
+    title: "Brush dan Alat Makeup Yang Paling Sering Digunakan",
+    author: "celle",
+    image: "https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg",
+    published_at: "4 hours ago",
+  },
+  {
+    title: "Brush dan Alat Makeup Yang Paling Sering Digunakan",
+    author: "celle",
+    image: "https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg",
+    published_at: "4 hours ago",
+  },
+  {
+    title: "Brush dan Alat Makeup Yang Paling Sering Digunakan",
+    author: "celle",
+    image: "https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg",
+    published_at: "4 hours ago",
+  },
+  {
+    title: "Brush dan Alat Makeup Yang Paling Sering Digunakan",
+    author: "celle",
+    image: "https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg",
+    published_at: "4 hours ago",
+  },
+  {
+    title: "Brush dan Alat Makeup Yang Paling Sering Digunakan",
+    author: "celle",
+    image: "https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg",
+    published_at: "4 hours ago",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -115,7 +160,7 @@ export default function Home() {
               {Data.map((val, idx) => {
                 return (
                   <>
-                    <div className={styles.box}>
+                    <div className={styles.box} key={idx}>
                       <div className={styles.editors}>
                         <div>
                           <Image
@@ -195,28 +240,22 @@ export default function Home() {
             display: "flex",
           }}
         >
-          <div
-          // style={{ backgroundColor: "cyan" }}
-          >
+          <div style={{ marginLeft: "-3rem" }}>
             <Image
               src={Girl}
               alt="girl"
-              style={{ marginLeft: "-3rem" }}
+              // style={{ marginLeft: "-3rem" }}
               height={400}
               width={380}
             />
           </div>
           <div
             style={{
-              // backgroundColor: "coral",
-              // flexGrow: 2,
-              marginLeft: "-7rem",
-              // border: "1px solid black",
+              marginLeft: "-5rem",
               width: "27%",
               padding: "3rem 1.5rem",
             }}
           >
-            {/* <div style={{wordWrap: 'break-word'}}> */}
             <h1>Looking for product that are just simply perfect for you?</h1>
             <p>
               Here are some products theat we believe match your skin, hair, and
@@ -240,15 +279,7 @@ export default function Home() {
                 See My Matches
               </button>
             </div>
-            {/* </div> */}
           </div>
-          {/* <div
-            style={{
-              backgroundColor: "cornsilk",
-              width: "15%",
-              padding: "0 0.5rem",
-            }}
-          > */}
           {productMatch.map((val, idx) => {
             return (
               <>
@@ -258,11 +289,11 @@ export default function Home() {
                     width: "15%",
                     padding: "0 0.5rem",
                   }}
+                  key={idx}
                 >
                   <div
                     // className={styles.boxContainer}
                     style={{
-                      // border: "1px solid gray",
                       padding: "2rem 1rem",
                       margin: "1rem 0",
                       height: "92%",
@@ -335,8 +366,273 @@ export default function Home() {
           {/* Latest Article */}
           <section className={styles.section}>
             <h2 style={{ marginBottom: "-0.5rem" }}>Latest Article</h2>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p style={{ color: "#a8a8a8", fontSize: "17px" }}>
+                So you can make better purchase decision
+              </p>
+              <p
+                style={{
+                  color: "#db284e",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  cursor: "pointer",
+                }}
+              >
+                See more &gt;{" "}
+              </p>
+            </div>
+
+            <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
+              {articles.map((val, idx) => {
+                return (
+                  <>
+                    <div key={idx} style={{ width: "32%" }}>
+                      {/* <div> */}
+                      <Image
+                        src={val.image}
+                        alt="article"
+                        width={600}
+                        height={350}
+                        objectFit="cover"
+                        style={{ borderRadius: "12px" }}
+                      />
+                      {/* </div> */}
+                      <h3 style={{ margin: "10px 0 0 0" }}>{val.title}</h3>
+                      <div style={{ display: "flex" }}>
+                        <p
+                          style={{
+                            textTransform: "capitalize",
+                            fontWeight: "500",
+                          }}
+                        >
+                          <span style={{ color: "#393939" }}>{val.author}</span>{" "}
+                          |
+                          <span style={{ color: "#7c7c7c" }}>
+                            {" "}
+                            {val.published_at}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
+              {/* <div style={{ backgroundColor: "seagreen", width: "32%" }}>2</div>
+              <div style={{ backgroundColor: "sienna", width: "32%" }}>3</div>
+              <div style={{ backgroundColor: "sienna", width: "32%" }}>3</div>
+              <div style={{ backgroundColor: "sienna", width: "32%" }}>3</div>
+              <div style={{ backgroundColor: "sienna", width: "32%" }}>3</div> */}
+            </div>
+          </section>
+
+          {/* Latest Review */}
+          <section className={styles.section}>
+            <h2 style={{ marginBottom: "-0.5rem" }}>Latest Reviews</h2>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p style={{ color: "#a8a8a8", fontSize: "17px" }}>
+                So you can make better purchase decision
+              </p>
+              <p
+                style={{
+                  color: "#db284e",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  cursor: "pointer",
+                }}
+              >
+                See more &gt;{" "}
+              </p>
+            </div>
+          </section>
+
+          {/* Popular Groups */}
+          <section className={styles.section}>
+            <h2 style={{ marginBottom: "-0.5rem" }}>Popular Groups</h2>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p style={{ color: "#a8a8a8", fontSize: "17px" }}>
+                Where the beauty TALK are
+              </p>
+              <p
+                style={{
+                  color: "#db284e",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  cursor: "pointer",
+                }}
+              >
+                See more &gt;{" "}
+              </p>
+            </div>
+          </section>
+
+          {/* Latest Videos */}
+          <section className={styles.section}>
+            <h2 style={{ marginBottom: "-0.5rem" }}>Latest Videos</h2>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p style={{ color: "#a8a8a8", fontSize: "17px" }}>
+                Watch and learn, ladies
+              </p>
+              <p
+                style={{
+                  color: "#db284e",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  cursor: "pointer",
+                }}
+              >
+                See more &gt;{" "}
+              </p>
+            </div>
+          </section>
+
+          {/* Trending */}
+          <section className={styles.section}>
+            <h2 style={{ marginBottom: "-0.5rem" }}>Trending This Week</h2>
+
             <p style={{ color: "#a8a8a8", fontSize: "17px" }}>
-              So you can make better purchase decision
+              See our weekly most reviewed products
+            </p>
+          </section>
+
+          {/* Top Brands */}
+          <section className={styles.section}>
+            <h2 style={{ marginBottom: "-0.5rem" }}>Top Brands</h2>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                // marginBottom: "1rem",
+              }}
+            >
+              <p style={{ color: "#a8a8a8", fontSize: "17px" }}>
+                We all know and love
+              </p>
+              <p
+                style={{
+                  color: "#db284e",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  cursor: "pointer",
+                }}
+              >
+                See more &gt;{" "}
+              </p>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                gap: "20px",
+                width: "100%",
+                height: "100px",
+                margin: "1.5rem 0 3rem 0",
+              }}
+            >
+              <div
+                style={{
+                  // backgroundColor: "saddlebrown",
+                  width: "16%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Image
+                  src={Nivea}
+                  alt="brands"
+                  width={90}
+                  height={90}
+                  objectFit="contain"
+                />
+              </div>
+              <div
+                style={{
+                  // backgroundColor: "salmon",
+                  width: "16%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Image
+                  src={Ordinary}
+                  alt="brands"
+                  width={130}
+                  height={20}
+                  objectFit="contain"
+                />
+              </div>
+              <div
+                style={{
+                  // backgroundColor: "skyblue",
+                  width: "16%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Image
+                  src={BodyShop}
+                  alt="brands"
+                  width={130}
+                  height={170}
+                  objectFit="contain"
+                />
+              </div>
+              <div
+                style={{
+                  // backgroundColor: "burlywood",
+                  width: "16%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Image
+                  src={SKII}
+                  alt="brands"
+                  width={90}
+                  height={100}
+                  objectFit="contain"
+                />
+              </div>
+              <div
+                style={{
+                  // backgroundColor: "crimson",
+                  width: "16%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Image
+                  src={Maybelline}
+                  alt="brands"
+                  width={150}
+                  height={100}
+                  objectFit="contain"
+                />
+              </div>
+              <div
+                style={{
+                  // backgroundColor: "darkolivegreen",
+                  width: "16%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Image
+                  src={Innisfree}
+                  alt="brands"
+                  width={100}
+                  height={100}
+                  objectFit="contain"
+                />
+              </div>
+            </div>
+            <h1>
+              Female Daily - Find everything you want to know about beauty on
+              Female Daily
+            </h1>
+            <p style={{ fontSize: "17px", fontWeight: "500" }}>
+              Product Reviews, Tips & Tricks, Expert and Consumer Opinions,
+              Beauty Tutorials, Discussions, Beauty Workshops, anything! <br />{" "}
+              We are here to be your friendly solution to all things beauty,
+              inside and out!
             </p>
           </section>
 

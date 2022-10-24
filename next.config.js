@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["https://static.femaledaily.com", "static.femaledaily.com"]
-  }
-}
+    domains: ["imgcdn.femaledaily.com", "static.femaledaily.com"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,0 +1,90 @@
+.section {
+  margin-bottom: 4rem;
+}
+.seeMore {
+  color: #db284e;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.box {
+  width: 20%;
+  gap: 20px;
+  margin-right: 1rem;
+}
+
+/* matches product */
+.matchesContainer {
+  background-color: #ffdbdb;
+  margin: 4rem 0;
+  display: flex;
+}
+.textMatches {
+  margin-left: -5rem;
+  width: 27%;
+  padding: 3rem 1.5rem;
+}
+.btnMatches {
+  padding: 1rem 1.7rem;
+  border-radius: 6px;
+  border: 0;
+  background-color: #db284e;
+  color: #fff;
+}
+.boxContainer {
+  padding: 2rem 1rem;
+  margin: 1rem 0;
+  height: 92%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.imgMatchesWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.star {
+  color: #db284e;
+}
+
+/* Popular Group */
+.groupContainer {
+  width: 25%;
+  height: 380px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+.imgGroupWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 0 0;
+}
+.icon {
+  padding: 0 1.5rem;
+}
+
+/* Top Brands */
+.brandContainer {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  height: 100px;
+  margin: 1.5rem 0 3rem 0;
+}
+.logo {
+  width: 16%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Trending */
+.ratingWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}

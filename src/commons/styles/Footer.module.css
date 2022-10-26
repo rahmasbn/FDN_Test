@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 2rem;
+  padding: 0 2rem 0 6rem;
+}
+.imgContainer {
+  display: flex;
+  margin-top: 2rem;
+  gap: 20px;
+}
+.copyright {
+  margin-top: 5px;
+  font-weight: 500;
+  color: gray;
+}
+.wrapper {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 1rem;
+}

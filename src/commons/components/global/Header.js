@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "src/commons/styles/Header.module.css";
-import logo from "public/logo.svg";
+import logo from "src/assets/icons/logo.svg";
 import Link from "next/link";
 
 function Header() {
@@ -11,7 +11,7 @@ function Header() {
         <div className={styles.navTop}>
           <div style={{ padding: "0 1rem" }}>
             <i
-              class="bi bi-list"
+              className="bi bi-list"
               style={{ fontSize: "2rem", color: "#393939" }}
             />
           </div>
@@ -28,15 +28,12 @@ function Header() {
               placeholder="Search products, articles, topics, brands, etc"
               name="search"
               className={styles.searchInput}
-              // onChange={this.debounce(this.onSearch, 1000)}
-              // onKeyPress={(e) => e.key === "Enter" && this.onSearch}
-              // autoComplete="off"
             />
           </div>
           <div style={{ padding: "0 0 0 1rem" }}>
             <button className={styles.btnLogin}>
               <i
-                class="bi bi-person-circle"
+                className="bi bi-person-circle"
                 style={{ fontSize: "1.3rem", color: "#fff" }}
               />
               <p className={styles.loginText}>login / signup</p>
